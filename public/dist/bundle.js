@@ -245,7 +245,7 @@
 	    document.getElementById('pages').childNodes[currentActiveNumber - 2].firstChild.className = 'active';
 	}
 
-	var moveContent = 420;
+	var moveContent = 422;
 
 	module.exports = {
 	    moveContent: moveContent,

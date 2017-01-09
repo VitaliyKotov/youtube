@@ -52,7 +52,7 @@ function swipeBackward () {
     document.getElementById('pages').childNodes[(currentActiveNumber - 2)].firstChild.className = 'active';
 }
 
-const moveContent = 420;
+const moveContent = 422;
 
 module.exports = {
     moveContent,
