@@ -1,5 +1,4 @@
 const Listeners = require('./listeners');
- // import * as Listeners from './listeners';
 
 function initLayout () {
     let layout = '<div id="wrapper"><input id="search" type="text"><span id="search-icon"><i class="fa fa-search"'

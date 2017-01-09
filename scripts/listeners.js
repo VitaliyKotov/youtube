@@ -5,8 +5,8 @@ function listenInput (e) {
     if(e.keyCode === 13) {
         ChangeLayout.clearResults();
         ChangeLayout.clearPagination();
-        searchQuery = this.value;
-        Request.sendRequest(searchQuery);
+        let input = document.getElementById('search');
+        Request.sendRequest(input.value);
     }
 }
 
@@ -75,14 +75,14 @@ function getEndTouchX(element, start) {
                 if(pages.childNodes.length > 2 && firstPage !== 'active') {
                     page.style.transform += 'translateY( ' + ChangeLayout.moveContent + 'px)';
                     this.removeEventListener('touchend', getEndTouchXListener);
-                    ChangeLayout.ChangeLayout.removePage();
-                    ChangeLayout.ChangeLayout.swipeBackward();
+                    ChangeLayout.removePage();
+                    ChangeLayout.swipeBackward();
                 }
             } else {
                 page.style.transform += 'translateY( -' + ChangeLayout.moveContent + 'px)';
                 this.removeEventListener('touchend', getEndTouchXListener);
-                ChangeLayout.ChangeLayout.addPage();
-                ChangeLayout.ChangeLayout.swipeForward();
+                ChangeLayout.addPage();
+                ChangeLayout.swipeForward();
                 Request.sendRequest();
             }
         }
