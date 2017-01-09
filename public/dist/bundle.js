@@ -161,6 +161,7 @@
 	}
 
 	function listenPagination(e) {
+	    e.preventDefault();
 	    var currentActive = document.getElementsByClassName('active')[0];
 	    var currentActiveNumber = parseInt(currentActive.innerHTML, 10);
 	    currentActive.className = '';

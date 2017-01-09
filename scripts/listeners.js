@@ -90,6 +90,7 @@ function getEndTouchX(element, start) {
 }
 
 function listenPagination (e) {
+    e.preventDefault();
     let currentActive = document.getElementsByClassName('active')[0];
     let currentActiveNumber = parseInt(currentActive.innerHTML, 10);
     currentActive.className = '';
