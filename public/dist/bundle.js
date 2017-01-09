@@ -171,6 +171,7 @@
 	        if (currentActiveNumber < targetNumber) {
 	            content.style.transform = 'translateY( -' + (targetNumber - 1) * ChangeLayout.moveContent + 'px)';
 	            ChangeLayout.addPage();
+	            Request.sendRequest();
 	        } else {
 	            content.style.transform = 'translateY( -' + (targetNumber - 1) * ChangeLayout.moveContent + 'px)';
 	            ChangeLayout.removePage();
