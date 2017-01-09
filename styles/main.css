@@ -167,7 +167,7 @@ i:before {
 /*     transition: background-color 0.2s; */
 }
 
-#pages .active,
+#pages .active
  {
     background-color: #f13030;
 }
