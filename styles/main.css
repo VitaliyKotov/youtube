@@ -164,11 +164,9 @@ i:before {
     margin-top: -13px;
     line-height: 23px;
     cursor: pointer;
-    transition: background-color 0.2s;
 }
 
-#pages .active,
-#pages span:hover {
+#pages .active {
     background-color: #f13030;
 }
 
