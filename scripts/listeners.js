@@ -91,23 +91,20 @@ function getEndTouchX(element, start) {
 
 function listenPagination (e) {
     let currentActive = document.getElementsByClassName('active')[0];
-    let currentActiveNumber = currentActive.innerHTML;
+    let currentActiveNumber = parseInt(currentActive.innerHTML, 10);
     currentActive.className = '';
     e.target.className = 'active';
-    let targetNumber = e.target.innerHTML;
+    let targetNumber = parseInt(e.target.innerHTML, 10);
     let content = document.getElementById('content');
     if(e.target.id === 'p') {
-        if(targetNumber === 1) {
-            content.style.transform = 'translateY(0px)';
-            ChangeLayout.removePage();
-        } else if (currentActiveNumber < targetNumber) {
+         if (currentActiveNumber < targetNumber) {
             content.style.transform = 'translateY( -' + (targetNumber - 1) * ChangeLayout.moveContent + 'px)';
             ChangeLayout.addPage();
-        } else if(currentActiveNumber > targetNumber){
+        } else {
             content.style.transform = 'translateY( -' + (targetNumber - 1) * ChangeLayout.moveContent + 'px)';
             ChangeLayout.removePage();
         }
-    e.stopPropagation();
+        e.stopPropagation();
     }
 }
 

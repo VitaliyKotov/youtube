@@ -162,19 +162,16 @@
 
 	function listenPagination(e) {
 	    var currentActive = document.getElementsByClassName('active')[0];
-	    var currentActiveNumber = currentActive.innerHTML;
+	    var currentActiveNumber = parseInt(currentActive.innerHTML, 10);
 	    currentActive.className = '';
 	    e.target.className = 'active';
-	    var targetNumber = e.target.innerHTML;
+	    var targetNumber = parseInt(e.target.innerHTML, 10);
 	    var content = document.getElementById('content');
 	    if (e.target.id === 'p') {
-	        if (targetNumber === 1) {
-	            content.style.transform = 'translateY(0px)';
-	            ChangeLayout.removePage();
-	        } else if (currentActiveNumber < targetNumber) {
+	        if (currentActiveNumber < targetNumber) {
 	            content.style.transform = 'translateY( -' + (targetNumber - 1) * ChangeLayout.moveContent + 'px)';
 	            ChangeLayout.addPage();
-	        } else if (currentActiveNumber > targetNumber) {
+	        } else {
 	            content.style.transform = 'translateY( -' + (targetNumber - 1) * ChangeLayout.moveContent + 'px)';
 	            ChangeLayout.removePage();
 	        }
