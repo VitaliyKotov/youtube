@@ -1,0 +1,206 @@
+
+input {
+    width: 60%;
+    height: 30px;
+    margin: 15px auto;
+    border-radius: 5px;
+    padding-right: 37px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+#content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    transition: opacity 1s;
+}
+
+#content li {
+    display: inline-block;
+    margin-bottom: 15px;
+    max-width: 330px;
+    position: relative;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+.title {
+    position: absolute;
+    top: 80px;
+    left: 0px;
+    background: rgba(49, 150, 49, 0.85);
+    text-align: center;
+    width: 100%;
+    padding: 5px
+}
+
+.title a {
+    color: #fff;
+    font: 1.4rem 'Lato', sans-serif; 
+}
+
+span {
+    display: block;
+    padding: 10px;
+    color: black;
+    font: 1rem 'Lato', sans-serif;
+    text-align: left;
+}
+
+a {
+    color: black;
+}
+
+i:before {
+    margin-right: 15px;
+    font-size: 1.4rem;
+}
+
+.fa-eye {
+    float: right;
+}
+
+.fa-calendar {
+    float: left;
+}
+
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+
+.author {
+    text-align: center;
+}
+
+.description {
+    height: 129px;
+    overflow: hidden;
+    position: relative;
+}
+
+.description:after { 
+  content: "";
+  text-align: right;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 40%;
+  height: 1.3rem;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 50%);
+}
+
+#search-icon {
+    display: inline-block;
+    padding: 0;
+    background: #03bbab;
+    height: 25px;
+    vertical-align: middle;
+    border-radius: 5px;
+    margin-left: -38px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+#search-icon:hover {
+    background-color: #f1a903;
+}
+
+.fa-search {
+    color: white;
+    line-height: 25px;
+    text-align: center;
+    width: 36px;
+}
+
+.fa-search:before {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+#pages li {
+    display: inline-block;
+    font-size: 1.2rem;
+    border: 2px solid black;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    background-color: white;
+    position: relative;
+    margin-right: 5px;
+}
+
+#pages {
+    text-align: center;
+    padding: 0;
+    list-style: none;
+}
+
+#pages span {
+    color: white;
+    background-color: black;
+    border-radius: 50%;
+    text-align: center;
+    padding: 0;
+    width: 26px;
+    height: 26px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -13px;
+    margin-top: -13px;
+    line-height: 23px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+#pages .active,
+#pages span:hover {
+    background-color: #f13030;
+}
+
+/*sticky footer*/
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background: #696868;
+    user-select: none; 
+}
+
+#wrapper {
+    position: relative; 
+    margin: 0 auto; 
+    height: auto !important; 
+    height: 100%; 
+    min-height: 100%; 
+    text-align: center;
+    margin-top: 10px;
+}
+
+#container {
+    padding-bottom: 50px; 
+    height: 420px;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+#pagination {
+    position: absolute;
+    width: 100%;
+    bottom: 0; 
+}
